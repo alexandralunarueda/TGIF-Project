@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav class="barranavegacion navbar navbar-expand-lg navBar ">
+        <!-- hasta aqui -->
+        <div>
+          <div class=" collapse navbar-collapse "id="navbarSupportedContent">
+              <div class="collapse navbar-collapse" >
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Congress113
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="house-starter-page.html">House</a>
+                        <a class="dropdown-item" href="senate-starter-page.html">Senate</a>
+                      </div>
+                    </li>
+<!--          atendance-->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Attendance
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="house_attendance.html">House</a>
+    <a class="dropdown-item" href="senate_attendance.html">Senate</a>
+  </div>
+</li>
+<!--PARTY LOYALTY-->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Party Loyalty
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="house_loyalty.html">House</a>
+    <a class="dropdown-item" href="senate_loyalty.html">Senate</a>
+  </div>
+</li>
+</ul>
+</div>
+<div class="prueba2 justify-content-end">
+  <a class="" href="mailto:info@tgif.net">
+  info@tgif.net</a>
+</div>
+</nav>
+<div class="hilera1 row">
+  <div class="imagen1 col-lg-2 col-md-2 col-sm-12 d-flex align-items-end">
+      <img src="usa_gobierno.png" alt="imagen gobierno" height="150">
+    </div>
+  <div class="prueba1 col-lg-10 col-md-10 col-sm-12 font-weight-bold text-center d-flex align-items-end">Transparent Government In Fact</div>
+  
+</div>
+<div class="hilera3 row">
+    <div class="col-lg-8 col-md-8 col-sm-12 text-justify">
+        <h2><u>Attendance</u></h2>
+        <p>The Constitution specifies that a majority of members constitutes a quorum to do 
+            business in each house. Representatives and senators rarely force the presence of
+             a quorum by demanding quorum calls; thus, in most cases, debates continue even if 
+             a majority is not present.</p>
+        <p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each
+            senator stating "aye" or "no" when his or her name is announced. The House reserves 
+            roll-call votes for the most formal matters, as a roll-call of all 435 representatives
+            takes quite some time; normally, members vote by electronic device. In the case of
+            a tie, the motion in question fails. In the Senate, the Vice President may (if
+            present) cast the tiebreaking vote.</p>
+    </div>
+    <div class="col-lg-4 col-md-4col-sm-12">
+        <h2><u>Senate at a glance</u></h2>
+    <table class=" table-responsive-lg-md-sm  table-striped">
+        <thead>
+            <tr>
+                <th>Party</th>
+                <th>reps</th>
+                <th>% VWP</th>
+    
+            </tr>
+        </thead>
+        <tbody id="littletable">
+            <tr>
+                <td>Reps</td>
+                <td id="numbReps"></td>
+                <td id="votesReps"></td>
+    
+            </tr>
+            <tr>
+                    <td>Dem</td>
+                    <td id="numbDems"></td>
+                    <td id="votesDems"></td>
+    
+                </tr>
+                <tr>
+                        <td>Indep</td>
+                        <td id="numbInd"></td>
+                        <td id="votesInd"></td>
+            
+                </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+<div class="hilera4 row">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+    <h2><u>Most Loyal (Top 10% of Party)</u></h2>
+    <table class=" table-responsive-lg-md-sm  table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number of party votes</th>
+                <th>% Party votes</th>
+    
+            </tr>
+        </thead>
+        <tbody id="missedtable">
+           
+        </tbody>
+    </table>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+    <h2><u>Least Loyal (Bottom 10% of Party)</u></h2>
+    <table class=" table-responsive-lg-md-sm  table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number of party votes</th>
+                <th>% Party votes</th>
+    
+            </tr>
+        </thead>
+        <tbody id="menosmissed">
+           
+        </tbody>
+    </table>
+    </div>
+</div>
+
+    <div class="pie_pagina text-center">© 2019 TGIF | All Rights Reserved</div>
+    <script src="senate.js"> </script> 
+<script src="senate_loyalty.js"> </script> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
+
+
+</body>
+</html>

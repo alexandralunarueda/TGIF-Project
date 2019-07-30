@@ -3,6 +3,7 @@ var members= data.results[0].members;
 console.log(members);
 
 
+
 let statistics = {
     reps: 0,
     rep_votes:0,

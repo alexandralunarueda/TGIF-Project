@@ -1,4 +1,3 @@
-
 var members= data.results[0].members;
 console.log(members);
 
@@ -31,7 +30,6 @@ members.forEach(member =>{
 
     }
 });
-
 statistics.totalAvgR = statistics.rep_votes/statistics.reps;
 statistics.totalAvgD = statistics.dems/statistics.dems;
 statistics.totalAvgI = statistics.ind_votes/statistics.ind;
@@ -40,19 +38,16 @@ calcStatsc();
 
 
 function paintTable(){
-     document.getElementById('numbReps').innerHTML=statistics.reps;
-    document.getElementById('votesReps').innerHTML=statistics.totalAvgR.toFixed(2);  
-    document.getElementById('numbDems').innerHTML=statistics.dems;
-     document.getElementById('votesDems').innerHTML=statistics.totalAvgD.toFixed(2);  
-    document.getElementById('numbInd').innerHTML=statistics.ind;
-    document.getElementById('votesInd').innerHTML=statistics.totalAvgI.toFixed(2);  
+    document.getElementById('numbReps').innerHTML=statistics.reps;
+   document.getElementById('votesReps').innerHTML=statistics.totalAvgR.toFixed(2);  
+   document.getElementById('numbDems').innerHTML=statistics.dems;
+    document.getElementById('votesDems').innerHTML=statistics.totalAvgD.toFixed(2);  
+   document.getElementById('numbInd').innerHTML=statistics.ind;
+   document.getElementById('votesInd').innerHTML=statistics.totalAvgI.toFixed(2);  
 }
 paintTable();
 
-//engaged//
-
-
-
+/*loyalty*/
 
 
 
@@ -60,9 +55,9 @@ function printEngageTable(id) {
     let table=document.getElementById(id);
     let ordenados;
     if(id == "missedtable"){
-       ordenados= members.sort(function (a,b){return b.missed_votes_pct-a.missed_votes_pct});
+       ordenados= members.sort(function (a,b){return b.votes_with_party_pct-a.votes_with_party_pct});
     } else {
-        ordenados= members.sort(function (a,b){return a.missed_votes_pct-b.missed_votes_pct});
+        ordenados= members.sort(function (a,b){return a.votes_with_party_pct-b.votes_with_party_pct});
     }
 
     let diezprimeros = ordenados.slice(0,(members.length*0,10));
@@ -70,8 +65,8 @@ function printEngageTable(id) {
     for(let i= 0; i< diezprimeros.length;i++){
         let row = document.createElement('tr');
         row.insertCell().textContent = diezprimeros[i].first_name;
-        row.insertCell().textContent=diezprimeros[i].missed_votes;
-        row.insertCell().textContent=diezprimeros[i].missed_votes_pct + "%";
+        row.insertCell().textContent=diezprimeros[i].total_votes;
+        row.insertCell().textContent=diezprimeros[i].votes_with_party_pct+ "%";
         
         table.append(row);
     }
